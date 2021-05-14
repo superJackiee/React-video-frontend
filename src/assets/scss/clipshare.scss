@@ -1,0 +1,218 @@
+$bg: #2544f7;
+$text-length: 50;
+$animation-time: 2s;
+
+.clip-main{
+    display: grid;
+    height: 100vh;
+    .navbar-brand-img{
+        font-size: 30px;
+    }
+}
+
+.text-muted{
+    color: red !important;
+    font-size: 20px;
+}
+
+.typing-cripshare {
+  position: relative;
+	&::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: $bg;
+    background: $bg;
+    animation: typing $animation-time steps($text-length) forwards, caret 1s infinite;
+  }
+}
+@keyframes typing {
+	to { width: 0 }
+}
+
+.display-main{
+  display: grid;
+  height: 100vh;
+  background-color: #f2f2f2 !important;
+  .navbar{
+    background-color: white !important;
+    .navbar-brand-img{
+      color: $bg;
+      font-size: 30px;
+      display: contents;
+    }
+  }
+}
+
+
+.file-drop > .file-drop-target{
+  position: fixed;
+  margin: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  display: none;
+}
+
+.file-drop > .file-drop-target.file-drop-dragging-over-frame {
+  &.file-drop-target{
+    display: block;
+    border: 2px dashed rgba(0,0,0,.5);
+  }
+}
+
+.header-show, .header-hide{
+  display: none !important;
+}
+
+@media (max-width: 920px){
+  .header-show{
+    display: block;
+  }
+  .header-hide{
+    display: none;
+  }
+}
+
+.color-black{
+  color: black;
+}
+.float-left{
+  float: left;
+}
+
+.right-push{
+  display:flex;
+  justify-content:flex-end;
+}
+.color-1{
+  color:#2C2C2C
+}
+.video-list{
+  overflow: auto;
+  height: 83vh;
+}
+.img-fluid{
+  height: 100%;
+}
+.icon-btn{
+  padding: 10px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-card-image {
+  border-radius: 2px;
+  box-shadow: 0 0 11px #ececec;
+  // overflow: hidden;
+  position: relative;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .moles {display:none;}
+}
+
+.video-card:hover .time{
+  opacity: unset;
+}
+.video-card-image img {
+ width: 100%;
+}
+.play-icon {
+  opacity: 0;
+  position: absolute;
+}
+.play-icon .fas {
+  bottom: 0;
+  height: 40px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+}
+.video-card:hover .play-icon {
+  background: #000 none repeat scroll 0 0;
+  border-radius: 2px;
+  bottom: 0;
+  color: #fff;
+  font-size: 35px;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.video-title a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+.video-title {
+  margin-bottom: 5px;
+}
+.video-page {
+  font-size: 11px;
+}
+.video-view {
+  color: #acacac;
+  font-size: 10px;
+  font-weight: 500;
+  margin: 2px 0 0;
+}
+.video-card-body {
+  padding: 12px;
+}
+.video-card-list .video-card-image {
+  float: left;
+  height: 77px;
+  margin: 0 12px 0 0;
+  width: 122px;
+}
+.video-card-list .video-card-body {
+  padding: 0;
+}
+.video-card-list {
+  background: transparent none repeat scroll 0 0;
+  box-shadow: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.video-card-list .video-card-body .video-title a {
+  font-size: 13px;
+}
+.video-card-list .video-card-body .video-title {
+  line-height: 17px;
+}
+.video-card-list .video-card-body .right-action {
+  opacity: 0;
+}
+.video-card-list:hover .video-card-body .right-action {
+  opacity: unset;
+}
+
+@media screen and (max-width:640px) {
+.mobiless {
+margin-top: -92px;
+}
+}
